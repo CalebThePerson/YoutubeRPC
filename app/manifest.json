@@ -1,0 +1,50 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/16x16.png",
+    "48":"images/48x48.png",
+    "128": "images/128x128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "libs/polyfill.min.js",
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "cookies",
+    "*://*.google.com/",
+    "pageCapture",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+    },
+    "default_title": "YoutubeRPC",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://maxcdn.bootstrapcdn.com; object-src 'self';"
+
+
+}
