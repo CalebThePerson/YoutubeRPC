@@ -6,8 +6,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
     "@babel/polyfill": "7.2.5",
+    "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "del": "^2.2.0",
@@ -17,11 +17,11 @@
     "gulp-chrome-manifest": "0.0.13",
     "gulp-clean-css": "^2.0.3",
     "gulp-eslint": "^2.0.0",
+    "gulp-htmlmin": "^2.0.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-htmlmin": "^2.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
@@ -34,9 +34,7 @@
   },
   "eslintConfig": {
     "env": {
-
       "es6": true,
-
       "node": true,
       "browser": true
     },
@@ -54,5 +52,9 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "express": "^4.17.1"
   }
 }

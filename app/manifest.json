@@ -10,6 +10,7 @@
   },
   "default_locale": "en",
   "background": {
+
     "scripts": [
       "libs/polyfill.min.js",
       "scripts/chromereload.js",
@@ -23,7 +24,9 @@
     "cookies",
     "*://*.google.com/",
     "pageCapture",
-    "webRequest"
+    "webRequest",
+    "storage",
+    "alarms"
   ],
   "content_scripts": [
     {
@@ -38,7 +41,7 @@
       "all_frames": false
     }
   ],
-  "page_action": {
+  "browser_action": {
     "default_icon": {
     },
     "default_title": "YoutubeRPC",
